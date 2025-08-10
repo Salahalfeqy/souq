@@ -1,0 +1,47 @@
+﻿@model List<Product>
+
+
+
+
+<div class="container mt-5 mb-5">
+
+    <form action="ProductSearch" method="get">
+        <div class="row">
+            <div class="col-sm-10">
+                <input type="text" name="xname" id="xname" class="form-control" placeholder="Search" />
+            </div>
+            <input type="submit" class="col-sm-2 btn btn-primary" value="Search" />
+        </div>
+    </form>
+
+</div>
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+    <h2>Search in Products</h2>
+    <p>We are in service and give you the best with delivery options where ever you are</p>
+</div><!-- End Section Title -->
+
+
+<section id="services" class="services section">
+    <div class="container">
+        @*style="box-shadow:0 0 30px rgp(214 215 216 /60%)"*@
+        <div class="row gy-4 ">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item ">
+                    <div class="portfolio-content h-100 ">
+
+                        <a href="~/assets/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="~/@item.Photo" class="img-fluid" alt=""></a>
+                        <div class="portfolio-info">
+                            <h4><a href="/Home/CurrentProduct/@item.Id" title="More Details">@item.Name</a></h4>
+                            <p>@item.Price EGP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End Portfolio Item -->
+            }
+        </div>
+    </div>
+
+</section><!-- /Services Section -->

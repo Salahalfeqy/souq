@@ -1,0 +1,47 @@
+﻿@model List<Product>
+
+
+<!-- Services Section -->
+<section id="services" class="services section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Categories</h2>
+        <p>Every Category You Need Every Where You Want</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+        <div class="row gy-4">
+            @foreach (var item in Model)
+            {
+                @* <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item d-flex">
+                        <img src="~/@item.Photo" />
+                        <h4 class="title"><a href="#" class="stretched-link">@item.Name</a></h4>
+                            <p class="description">@item.Price</p>
+                    </div>
+                </div>*@
+                
+                <!-- End Service Item -->
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-active">
+                    <div class="portfolio-content h-100">
+                        <a href="~/assets/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="~/@item.Photo" class="img-fluid" alt=""></a>
+                        <div class="portfolio-info">
+                            <h4><a href="/Home/CurrentProduct/@item.Id" title="More Details">@item.Name</a></h4>
+                            <p>@item.Price EGP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End Portfolio Item -->
+            }
+
+
+
+
+        </div>
+
+    </div>
+
+</section><!-- /Services Section -->
