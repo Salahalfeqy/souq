@@ -1,0 +1,37 @@
+﻿product view
+
+product controller
+@model ProductVm
+<form asp-action="Create" asp-controller="Product" method="post" class="info-item" data-aos="fade-up" data-aos-delay="200">
+    <div class="row gy-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="col-md-6">
+            <input type="text" name="CatName" id="CatName" class="form-control" placeholder="Category Name">
+            <span asp-validation-for="CatName" class="text-danger"></span>
+
+        </div>
+
+        <div class="col-md-6 ">
+            <input type="text" class="form-control" name="ProductPrice" id="ProductPrice" placeholder="Product Name">
+            <span asp-validation-for="ProductPrice" class="text-danger"></span>
+
+        </div>
+
+        <div class="col-12">
+            <input type="text" class="form-control" name="ProductName" id="ProductName" placeholder="Price" required="">
+
+        </div>
+
+        <div class="col-12">
+            <input type="number" class="form-control" name="ProductQty" id="ProductQty" rows="6" placeholder="Quantity" required=""></input>
+
+        </div>
+
+        <div class="col-12 text-center">
+
+            <button type="submit" class="btn btn-primary">Create Product</button>
+        </div>
+
+    </div>
+</form>
