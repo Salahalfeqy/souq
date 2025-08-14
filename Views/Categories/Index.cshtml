@@ -1,5 +1,23 @@
 ﻿@model IEnumerable<souq.Models.Category>
 
+<!-- DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#Categories').DataTable({
+            // language: {
+            //     url: 'https:cdn.datatables.net/plug-ins/1.13.4/i18n/ar.json' للغة العربية
+            // }
+        });
+    });
+</script>
+
+
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -9,7 +27,7 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table" id="Categories">
     <thead>
         <tr>
             <th>
