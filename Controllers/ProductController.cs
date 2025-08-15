@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using souq.Models;
 
 namespace souq.Controllers
@@ -7,6 +8,11 @@ namespace souq.Controllers
     {
         public IActionResult Index()
         {
+            Souq2Context db = new Souq2Context();
+         var list=   db.Categories.Select(x => new { x.Id, x.Name, }).ToList();
+
+
+            ViewBag.CatList = new SelectList(list, "Id", "Name");
             return View();
         }
         [HttpPost]

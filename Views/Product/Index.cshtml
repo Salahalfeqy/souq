@@ -33,5 +33,8 @@ product controller
             <button type="submit" class="btn btn-primary">Create Product</button>
         </div>
 
+
     </div>
+    @Html.DropDownList("Id", (SelectList)ViewBag.CatList, "choose category")
+
 </form>

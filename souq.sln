@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.35821.62 d17.14
+VisualStudioVersion = 17.14.35821.62
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "souq", "souq.csproj", "{1A3142BF-4DFD-450A-8675-F7EB398BB428}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminPanel.Web", "..\AdminPanel\AdminPanel.Web\AdminPanel.Web.csproj", "{9C8AF658-D7A0-48BE-9A6F-EA9A121920C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1A3142BF-4DFD-450A-8675-F7EB398BB428}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A3142BF-4DFD-450A-8675-F7EB398BB428}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A3142BF-4DFD-450A-8675-F7EB398BB428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C8AF658-D7A0-48BE-9A6F-EA9A121920C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C8AF658-D7A0-48BE-9A6F-EA9A121920C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C8AF658-D7A0-48BE-9A6F-EA9A121920C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C8AF658-D7A0-48BE-9A6F-EA9A121920C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
